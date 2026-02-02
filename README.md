@@ -1,30 +1,72 @@
-# homebrew-codex-voice
+# homebrew-voxterm
 
-Homebrew tap for [codex-voice](https://github.com/jguida941/codex-voice) - Rust voice overlay for Codex CLI with local Whisper STT.
+Homebrew tap for [VoxTerm](https://github.com/jguida941/voxterm) - Voice HUD for AI CLIs with local Whisper STT.
 
 ## Install
 
 ```bash
-brew tap jguida941/codex-voice
-brew install codex-voice
+brew tap jguida941/voxterm
+brew install voxterm
 ```
 
 ## Usage
 
 ```bash
 cd ~/my-project
-codex-voice
+voxterm
 ```
 
-First run downloads the Whisper model if missing.
+First run automatically downloads the Whisper model if missing.
 
-## Pre-download model (optional)
+## Options
 
 ```bash
-$(brew --prefix)/opt/codex-voice/libexec/scripts/setup.sh models --base
+voxterm --help                    # Show all options
+voxterm --theme dracula           # Use a different theme
+voxterm --auto-voice              # Start with auto-voice enabled
+voxterm --backend claude          # Use Claude Code instead of Codex
+voxterm --mic-meter               # Measure ambient/speech levels
 ```
 
-## Notes
+### Available Themes
+`coral` (default), `catppuccin`, `dracula`, `nord`, `ansi`, `none`
 
-- Builds from source (requires Rust + CMake)
-- Current version: v1.0.28
+### Available Backends
+`codex` (default), `claude`, or any custom command
+
+## Pre-download Whisper Model (optional)
+
+```bash
+$(brew --prefix)/opt/voxterm/libexec/scripts/setup.sh models --base
+```
+
+## Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+R` | Record (push-to-talk) |
+| `Ctrl+V` | Toggle auto-voice |
+| `Ctrl+T` | Toggle send mode |
+| `Ctrl+Y` | Theme picker |
+| `?` | Show help overlay |
+| `Ctrl+Q` | Quit |
+
+## Requirements
+
+- macOS (Apple Silicon or Intel)
+- Builds from source (Rust + CMake installed automatically by Homebrew)
+
+## Troubleshooting
+
+If you encounter issues:
+```bash
+# Rebuild from source
+brew reinstall voxterm
+
+# Check Whisper model
+ls $(brew --prefix)/opt/voxterm/libexec/models/
+```
+
+## Version
+
+Current: v1.0.30
