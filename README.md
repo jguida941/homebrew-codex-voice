@@ -69,4 +69,4 @@ ls $(brew --prefix)/opt/voxterm/libexec/models/
 
 ## Version
 
-Current: v1.0.30
+Current: v1.0.33
