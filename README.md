@@ -64,7 +64,7 @@ If you encounter issues:
 brew reinstall voxterm
 
 # Check Whisper model
-ls $(brew --prefix)~/.local/share/voxterm/models/
+ls ~/.local/share/voxterm/models/
 ```
 
 ## Version
