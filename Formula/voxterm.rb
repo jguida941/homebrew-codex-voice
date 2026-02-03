@@ -26,8 +26,8 @@ class Voxterm < Formula
       To pre-download manually:
         #{libexec}/scripts/setup.sh models --base
 
-      Themes: coral, catppuccin, dracula, nord, ansi, none
-      Backends: codex (default), claude, gemini, aider, opencode, or custom command
+      Themes: chatgpt, claude, codex, coral, catppuccin, dracula, nord, tokyonight, gruvbox, ansi, none
+      Backends: codex (default), claude, gemini (in works), or custom command
 
       Run `voxterm --help` for all options.
     EOS

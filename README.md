@@ -29,10 +29,10 @@ voxterm --mic-meter               # Measure ambient/speech levels
 ```
 
 ### Available Themes
-`coral` (default), `catppuccin`, `dracula`, `nord`, `ansi`, `none`
+`chatgpt`, `claude`, `codex`, `coral` (default), `catppuccin`, `dracula`, `nord`, `tokyonight`, `gruvbox`, `ansi`, `none`
 
 ### Available Backends
-`codex` (default), `claude`, `gemini`, `aider`, `opencode`, or any custom command
+`codex` (default), `claude`, `gemini` (in works), or any custom command
 
 ## Pre-download Whisper Model (optional)
 
