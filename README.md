@@ -1,40 +1,40 @@
-# homebrew-voxterm
+# homebrew-voiceterm
 
-Homebrew tap for [VoxTerm](https://github.com/jguida941/voxterm) - Voice HUD for AI CLIs with local Whisper STT.
+Homebrew tap for [VoiceTerm](https://github.com/jguida941/voiceterm) - Voice HUD for AI CLIs with local Whisper STT.
 
 ## Install
 
 ```bash
-brew tap jguida941/voxterm
-brew install voxterm
+brew tap jguida941/voiceterm
+brew install voiceterm
 ```
 
 Upgrade:
 
 ```bash
 brew update
-brew upgrade voxterm
+brew upgrade voiceterm
 ```
 
 ## Usage
 
 ```bash
 cd ~/my-project
-voxterm
+voiceterm
 ```
 
 First run downloads a Whisper model if missing. Homebrew installs store models at:
-`~/.local/share/voxterm/models` (override with `VOXTERM_MODEL_DIR`).
+`~/.local/share/voiceterm/models` (override with `VOICETERM_MODEL_DIR`).
 
 ## Options
 
 ```bash
-voxterm --help                    # Show all options
-voxterm --theme dracula           # Use a different theme
-voxterm --auto-voice              # Start with auto-voice enabled
-voxterm --claude                  # Use Claude Code instead of Codex
-voxterm --mic-meter               # Measure ambient/speech levels
-voxterm --hud-style hidden        # Minimal UI (blank when idle)
+voiceterm --help                    # Show all options
+voiceterm --theme dracula           # Use a different theme
+voiceterm --auto-voice              # Start with auto-voice enabled
+voiceterm --claude                  # Use Claude Code instead of Codex
+voiceterm --mic-meter               # Measure ambient/speech levels
+voiceterm --hud-style hidden        # Minimal UI (blank when idle)
 ```
 
 ### Available Themes
@@ -46,7 +46,7 @@ voxterm --hud-style hidden        # Minimal UI (blank when idle)
 ## Pre-download Whisper Model (optional)
 
 ```bash
-$(brew --prefix)/opt/voxterm/libexec/scripts/setup.sh models --base
+$(brew --prefix)/opt/voiceterm/libexec/scripts/setup.sh models --base
 ```
 
 ## Keyboard Shortcuts
@@ -72,14 +72,14 @@ $(brew --prefix)/opt/voxterm/libexec/scripts/setup.sh models --base
 
 ```bash
 # Rebuild from source
-brew reinstall voxterm
+brew reinstall voiceterm
 
 # Check Whisper model
-ls ~/.local/share/voxterm/models/
+ls ~/.local/share/voiceterm/models/
 ```
 
-More help: https://github.com/jguida941/voxterm/blob/master/guides/TROUBLESHOOTING.md
+More help: https://github.com/jguida941/voiceterm/blob/master/guides/TROUBLESHOOTING.md
 
 ## Version
 
-Current: v1.0.63
+Current: v1.0.64
